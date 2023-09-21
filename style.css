@@ -1,0 +1,167 @@
+body {
+  height: 100%;
+  background: #94d4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mensaje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-top: -150px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 3px 3px 0px rgb(0, 111, 163);
+  font-size: 200%;
+}
+
+.flor-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.tallo {
+  width: 35px;
+  height: 400px;
+  background-color: rgb(91, 221, 91);
+  position: absolute;
+  top: 600px;
+  z-index: -1;
+}
+
+.oval-half-red {
+  position: absolute;
+  top: 750px;
+  left: 710px;
+  width: 250px;
+  height: 100px;
+  -moz-border-radius: 0 50% / 0 100%;
+  -webkit-border-radius: 0 50% / 0 100%;
+  border-radius: 0 50% / 0 100%;
+  background:  rgb(91, 221, 91);
+}
+
+.petala-1 {
+  position: absolute;
+  width: 90px;
+  height: 330px;
+  border-radius: 50%;
+  background: #ffe942;
+}
+.petala-2 {
+  position: absolute;
+  transform: rotate(60deg);
+  width: 90px;
+  height: 330px;
+  border-radius: 50%;
+  background: #ffe942;
+}
+.petala-3 {
+  position: absolute;
+  transform: rotate(120deg);
+  width: 90px;
+  height: 330px;
+  border-radius: 50%;
+  background: #ffe942;
+}
+.centro {
+  margin-top: 330px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #2e1c14;
+
+  z-index: 1;
+}
+
+div.rosa-1 > div.petala-1 {
+  background: #fced7f;
+  transform: rotate(330deg);
+  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
+}
+div.rosa-1 > div.petala-2 {
+  background: #fced7f;
+  transform: rotate(270deg);
+  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
+}
+div.rosa-1 > div.petala-3 {
+  background: #fced7f;
+  transform: rotate(210deg);
+  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
+}
+
+
+@media screen and (max-width: 400px) {
+  .mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -150px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 3px 3px 0px rgb(0, 111, 163);
+    font-size: 100%;
+  }
+
+  .oval-half-red {
+    display: none;
+  }
+
+  .petala-1 {
+    position: absolute;
+    width: 60px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ffe942;
+  }
+  .petala-2 {
+    position: absolute;
+    transform: rotate(60deg);
+    width: 60px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ffe942;
+  }
+  .petala-3 {
+    position: absolute;
+    transform: rotate(120deg);
+    width: 60px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ffe942;
+  }
+  .centro {
+    margin-top: 220px;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px; 
+    border-radius: 50%;
+    background: #2e1c14;
+    z-index: 1;
+  }
+
+  .tallo {
+    width: 35px;
+    height: 400px;
+    background-color: rgb(91, 221, 91);
+    position: absolute;
+    top: 480px;
+    margin-left: 5px;
+    z-index: -1;
+  }
+
+}
+
+
+
