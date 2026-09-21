@@ -1,167 +1,304 @@
 body {
-  height: 100%;
-  background: #94d4e7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #fdbfdd;
   overflow: hidden;
+  font-family: sans-serif;
 }
 
+/* =========================
+   MENSAJE
+========================= */
+
 .mensaje {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   position: absolute;
-  margin-top: -150px;
-  font-weight: bold;
-  font-family: sans-serif;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
   color: white;
-  text-shadow: 3px 3px 0px rgb(0, 111, 163);
+  font-weight: bold;
+
+  text-shadow: 3px 3px 0px rgb(184, 57, 57);
+
+  z-index: 20;
+}
+
+.mensaje h1 {
+  margin: 0;
   font-size: 200%;
 }
 
-.flor-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
+.mensaje h2 {
+  margin: 10px 0;
 }
 
+/* =========================
+   CONTENEDOR
+========================= */
+
+.flores {
+  position: absolute;
+  inset: 0;
+}
+
+/* =========================
+   FLOR
+========================= */
+
+.flor {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  z-index: 5;
+}
+
+/* POSICIONES */
+
+.flor-1 {
+  left: 30%;
+  top: 58%;
+
+  transform: scale(0.75);
+}
+
+.flor-2 {
+  left: 50%;
+  top: 53%;
+
+  transform: scale(1);
+
+  z-index: 10;
+}
+
+.flor-3 {
+  left: 70%;
+  top: 58%;
+
+  transform: scale(0.75);
+}
+
+/* =========================
+   PÉTALOS
+========================= */
+
+.petala {
+  position: absolute;
+
+  width: 90px;
+  height: 330px;
+
+  left: -45px;
+  top: -310px;
+
+  border-radius: 50%;
+
+  background: #fced7f;
+
+  box-shadow: inset 0 0 2px rgb(162, 132, 51);
+
+  transform-origin: 50% 310px;
+}
+
+/* 6 PÉTALOS */
+
+.petala-1 {
+  transform: rotate(0deg);
+}
+
+.petala-2 {
+  transform: rotate(60deg);
+}
+
+.petala-3 {
+  transform: rotate(120deg);
+}
+
+.petala-4 {
+  transform: rotate(180deg);
+}
+
+.petala-5 {
+  transform: rotate(240deg);
+}
+
+.petala-6 {
+  transform: rotate(300deg);
+}
+
+/* =========================
+   CENTRO
+========================= */
+
+.centro {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  left: -45px;
+  top: -45px;
+
+  border-radius: 50%;
+
+  background: #2e1c14;
+
+  z-index: 10;
+}
+
+/* =========================
+   TALLO
+========================= */
+
 .tallo {
+  position: absolute;
+
   width: 35px;
   height: 400px;
-  background-color: rgb(91, 221, 91);
-  position: absolute;
-  top: 600px;
+
+  left: -17.5px;
+  top: 35px;
+
+  background: rgb(91, 221, 91);
+
   z-index: -1;
 }
 
-.oval-half-red {
+/* =========================
+   HOJA
+========================= */
+
+.hoja {
   position: absolute;
-  top: 750px;
-  left: 710px;
+
   width: 250px;
   height: 100px;
-  -moz-border-radius: 0 50% / 0 100%;
-  -webkit-border-radius: 0 50% / 0 100%;
+
+  left: 0;
+  top: 190px;
+
   border-radius: 0 50% / 0 100%;
-  background:  rgb(91, 221, 91);
+
+  background: rgb(91, 221, 91);
+
+  transform: rotate(10deg);
+
+  z-index: -1;
 }
 
-.petala-1 {
-  position: absolute;
-  width: 90px;
-  height: 330px;
-  border-radius: 50%;
-  background: #ffe942;
-}
-.petala-2 {
-  position: absolute;
-  transform: rotate(60deg);
-  width: 90px;
-  height: 330px;
-  border-radius: 50%;
-  background: #ffe942;
-}
-.petala-3 {
-  position: absolute;
-  transform: rotate(120deg);
-  width: 90px;
-  height: 330px;
-  border-radius: 50%;
-  background: #ffe942;
-}
-.centro {
-  margin-top: 330px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: #2e1c14;
+/* =========================
+   MÓVIL
+========================= */
 
-  z-index: 1;
-}
-
-div.rosa-1 > div.petala-1 {
-  background: #fced7f;
-  transform: rotate(330deg);
-  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
-}
-div.rosa-1 > div.petala-2 {
-  background: #fced7f;
-  transform: rotate(270deg);
-  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
-}
-div.rosa-1 > div.petala-3 {
-  background: #fced7f;
-  transform: rotate(210deg);
-  box-shadow: inset 0px 0px 2px rgb(162, 132, 51);
-}
-
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .mensaje {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    margin-top: -150px;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: white;
-    text-shadow: 3px 3px 0px rgb(0, 111, 163);
-    font-size: 100%;
+    top: 20%;
   }
 
-  .oval-half-red {
-    display: none;
+  .mensaje h1 {
+    font-size: 40px;
+  }
+
+  .mensaje h2 {
+    font-size: 30px;
+    width: 100%;
+
+  }
+
+  .flor-1 {
+    left: 22%;
+    top: 70%;
+
+    transform: scale(0.48);
+  }
+
+  .flor-2 {
+    left: 50%;
+    top: 70%;
+
+    transform: scale(0.62);
+  }
+
+  .flor-3 {
+    left: 78%;
+    top: 70%;
+
+    transform: scale(0.48);
+  }
+
+  .petala {
+    width: 60px;
+    height: 220px;
+
+    left: -30px;
+    top: -205px;
+
+    transform-origin: 50% 205px;
   }
 
   .petala-1 {
-    position: absolute;
-    width: 60px;
-    height: 220px;
-    border-radius: 50%;
-    background: #ffe942;
+    transform: rotate(0deg);
   }
+
   .petala-2 {
-    position: absolute;
-    transform: rotate(60deg);
-    width: 60px;
-    height: 220px;
-    border-radius: 50%;
-    background: #ffe942;
+    transform: rotate(36deg);
   }
+
   .petala-3 {
-    position: absolute;
-    transform: rotate(120deg);
-    width: 60px;
-    height: 220px;
-    border-radius: 50%;
-    background: #ffe942;
+    transform: rotate(72deg);
   }
+
+  .petala-4 {
+    transform: rotate(108deg);
+  }
+
+  .petala-5 {
+    transform: rotate(144deg);
+  }
+
+  .petala-6 {
+    transform: rotate(180deg);
+  }
+
+  .petala-7 {
+    transform: rotate(216deg);
+  }
+
+  .petala-8 {
+    transform: rotate(252deg);
+  }
+
+  .petala-9 {
+    transform: rotate(288deg);
+  }
+
+  .petala-10 {
+    transform: rotate(324deg);
+  }
+
   .centro {
-    margin-top: 220px;
     width: 50px;
     height: 50px;
-    margin-left: 5px; 
-    border-radius: 50%;
-    background: #2e1c14;
-    z-index: 1;
+
+    left: -25px;
+    top: -25px;
   }
 
   .tallo {
-    width: 35px;
-    height: 400px;
-    background-color: rgb(91, 221, 91);
-    position: absolute;
-    top: 480px;
-    margin-left: 5px;
-    z-index: -1;
+    width: 25px;
+    height: 300px;
+
+    left: -12.5px;
+    top: 20px;
   }
 
+  .hoja {
+    width: 170px;
+    height: 70px;
+
+    top: 150px;
+  }
 }
-
-
-
